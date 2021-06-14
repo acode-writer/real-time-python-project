@@ -1,11 +1,13 @@
 menu_dict = {
     "1": "MadLibs",
-    "2": "Number guessing"
+    "2": "Number guessing",
+    "3": "Rock paper scissors"
 }
 
 dict_keys = {
     "madlib" : "1",
-    "guessing": "2"
+    "guessing": "2",
+    "rock_paper_scissor": "3"
 }
 
 def menu(menu_dict):
@@ -28,4 +30,8 @@ def main():
         from models.NumberGuessing import NumberGuessing
         number_guessing = NumberGuessing.guess()
         number_guessing.play()
+    elif user_choice == dict_keys["rock_paper_scissor"]:
+        from models.RockPaperScissor import RockPaperScissor
+        rock_paper_scissor = RockPaperScissor()
+        print(rock_paper_scissor.play())
 main()
